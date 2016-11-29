@@ -9,8 +9,7 @@ require 'database_cleaner'
 feature 'Accesing the website' do
 
   scenario 'I fill in a form that creates a new link' do
-    DatabaseCleaner.strategy = :transaction
-    DatabaseCleaner.start
+    DatabaseCleaner.strategy = :truncation
     visit '/links/new'
     fill_in :title, with: "Makers"
     fill_in :url, with: "http://www.makersacademy.com"
