@@ -9,7 +9,7 @@ class BookMark < Sinatra::Base
   end
 
   get '/links/new' do
-  erb :new_link
+    erb :new_link
   end
 
   post '/links' do
