@@ -8,7 +8,13 @@ class BookMark < Sinatra::Base
 
   end
 
-  get '/links' do
+  get '/links/new' do
+  erb :new_link
+  end
+
+  post '/links' do
+    p params
+    Link.create(:title => params[:title], :url => params[:url])
     @links = Link.all
     erb :links
   end
