@@ -4,9 +4,9 @@
 feature 'Accesing the website' do
   scenario 'I want to see a list of links' do
     Link.create(:title => "Makers", :url => 'http://www.makersacademy.com')
-    visit '/'
+    visit '/links'
     within 'ul#links' do
-      expect(page).to find_link('Makers').visible?
+      expect(page).to have_content('http://www.makersacademy.com')
     end
   end
 end

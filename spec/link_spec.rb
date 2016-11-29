@@ -9,6 +9,8 @@ subject(:link) {described_class.new}
     expect(link).to respond_to(:id)
   end
 
+  it "should contain an array of links"
+
 
 
 end

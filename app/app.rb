@@ -1,11 +1,16 @@
 require 'sinatra/base'
-
+require_relative './models/link.rb'
 class BookMark < Sinatra::Base
 
-  
+
 
   get '/' do
-    erb :link
+
+  end
+
+  get '/links' do
+    @links = Link.all
+    erb :links
   end
 
   # start the server if ruby file executed directly
