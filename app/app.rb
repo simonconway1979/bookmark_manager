@@ -5,6 +5,10 @@ require './app/models/data_mapper_setup.rb'
 
 class Bookmark_manager < Sinatra::Base
 
+  get '/' do
+    redirect '/links'
+  end
+
   get '/links/new' do
     erb(:'links/new')
   end
