@@ -1,0 +1,10 @@
+<h1>Filter Results </h1>
+
+<ul id='filter links'>
+  <% @filter_links.each do |tag| %>
+    <li>
+      Title: <%= tag.title %>
+      URL: <%= tag.url %>
+    </li>
+    <% end %>
+</ul>
