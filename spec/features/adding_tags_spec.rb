@@ -3,6 +3,7 @@ RSpec.feature "Adding tags to the bookmark manager" do
     add_link_with_tag
     expect(page).to have_content("Tags: Beauty")
   end
+
   scenario "adding more than one tag" do
     visit '/links/new'
     fill_in "title", with: "Youtube"
